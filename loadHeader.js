@@ -24,13 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (headerElement) {
         headerElement.innerHTML = headerContent;
         console.log('Header inserted into DOM');
+
+        // Add event listener for hamburger menu
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            this.classList.toggle('active');
+            document.querySelector('nav ul').classList.toggle('active');
+        });
     } else {
         console.error('Header element not found in the DOM');
     }
-
-    // Add event listener for hamburger menu
-    document.querySelector('.hamburger').addEventListener('click', function() {
-        this.classList.toggle('active');
-        document.querySelector('nav ul').classList.toggle('active');
-    });
 });
