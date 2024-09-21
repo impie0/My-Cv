@@ -7,10 +7,12 @@ body {
 }
 
 .container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    padding: 20px;
+    max-width: 1200px; /* Increase the max-width to make the form larger */
+    margin: 0 auto;
+    padding: 40px; /* Increase padding for better spacing */
+    background-color: transparent; /* Ensure no background color */
+    border-radius: 8px;
+    position: relative; /* Ensure the container is positioned relative */
 }
 
 .section {
@@ -27,23 +29,21 @@ body {
 }
 
 .section-title {
-    text-align: center;
-    font-size: 2.5em;
+    font-size: 36px; /* Increase the font size for the title */
     margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-    padding-bottom: 10px;
     color: var(--primary-color);
+    text-align: center; /* Center align the title */
+    position: relative; /* Ensure the pseudo-element is positioned correctly */
 }
 
 .section-title::after {
     content: '';
     display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--primary-color);
+    width: 60px; /* Adjust width as needed */
+    height: 4px; /* Adjust height as needed */
+    background-color: #4070F4; /* Adjust color as needed */
+    margin: 8px auto 0; /* Adjust margin as needed */
     position: absolute;
-    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -55,7 +55,9 @@ body {
 }
 
 .contact-info p {
-    margin-bottom: 20px;
+    font-size: 20px; /* Increase the font size for contact info */
+    margin-bottom: 10px;
+    text-align: center; /* Center align the contact info */
 }
 
 .contact-info i {
@@ -73,46 +75,56 @@ body {
 }
 
 form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the form elements */
+    width: 100%; /* Ensure the form takes full width */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increase the margin between form groups */
+    width: 100%; /* Ensure form groups take full width */
+    max-width: 800px; /* Limit the width of form groups */
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
+    font-size: 18px; /* Increase the font size for labels */
+    color: var(--text-color);
 }
 
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px; /* Increase the padding for input and textarea */
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
+    border-radius: 4px;
+    font-size: 18px; /* Increase the font size for input and textarea */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Only transition border color and box-shadow */
+}
+
+input:focus, textarea:focus {
+    border-color: var(--primary-color);
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(64, 112, 244, 0.5); /* Add a subtle shadow on focus */
 }
 
 button {
+    padding: 15px 30px; /* Increase the padding for the button */
     background-color: var(--primary-color);
     color: #fff;
-    padding: 10px 20px;
     border: none;
-    border-radius: 30px; /* Match the rounded style */
+    border-radius: 4px;
+    font-size: 18px; /* Increase the font size for the button */
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 button:hover {
-    background-color: #365bbf; /* Darker shade of the primary color */
+    background-color: #3050c4; /* Darker shade of primary color */
+    color: #fff; /* Ensure text color remains white */
 }
 
 /* Media Queries for Mobile Responsiveness */
@@ -142,5 +154,20 @@ button:hover {
     button {
         padding: 8px 16px;
         font-size: 0.9em;
+    }
+}
+
+/* Media query for larger screens */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1000px; /* Further increase the max-width for larger screens */
+    }
+
+    .form-group {
+        max-width: 900px; /* Further increase the width of form groups for larger screens */
+    }
+
+    button {
+        font-size: 20px; /* Increase the font size for the button on larger screens */
     }
 }
