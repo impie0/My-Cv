@@ -59,6 +59,7 @@ h3 {
 p {
     line-height: 1.6;
     margin-bottom: 20px;
+    text-align: left; /* Change text alignment to left */
 }
 
 ul {
@@ -82,5 +83,40 @@ ul li strong {
     font-size: 1.2em;
     line-height: 1.8;
     margin-bottom: 20px;
-    text-align: justify;
+    text-align: left; /* Change text alignment to left */
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p, .intro, .conclusion {
+        font-size: 1em;
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+        font-size: 1em;
+    }
 }
