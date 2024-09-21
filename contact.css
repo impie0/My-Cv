@@ -144,6 +144,10 @@ button:hover {
 
 /* Media query for smaller screens */
 @media (max-width: 600px) {
+    .container {
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
     .section-title {
         font-size: 28px; /* Decrease the font size for the title on smaller screens */
     }
