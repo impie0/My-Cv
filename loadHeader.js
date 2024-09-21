@@ -4,6 +4,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create the header content with icons
     var headerContent = `
     <nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
         <ul>
             <li><a href="index.html" class="nav-item"><i class="fas fa-home"></i><span>Home</span></a></li>
             <li><a href="about.html" class="nav-item"><i class="fas fa-user"></i><span>About</span></a></li>
@@ -22,4 +27,10 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         console.error('Header element not found in the DOM');
     }
+
+    // Add event listener for hamburger menu
+    document.querySelector('.hamburger').addEventListener('click', function() {
+        this.classList.toggle('active');
+        document.querySelector('nav ul').classList.toggle('active');
+    });
 });
