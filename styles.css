@@ -217,4 +217,10 @@ p {
     p {
         font-size: 18px;
     }
+
+    /* Adjust background image for mobile view */
+    body {
+        background: url('background-image-phone.jpg') no-repeat center center fixed;
+        background-size: cover; /* Ensure the background image covers the entire screen */
+    }
 }
