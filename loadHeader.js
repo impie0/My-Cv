@@ -30,6 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.toggle('active');
             document.querySelector('nav ul').classList.toggle('active');
         });
+
+        // Add event listeners for nav items to collapse the menu after clicking
+        document.querySelectorAll('.nav-item').forEach(function(item) {
+            item.addEventListener('click', function() {
+                document.querySelector('.hamburger').classList.remove('active');
+                document.querySelector('nav ul').classList.remove('active');
+            });
+        });
     } else {
         console.error('Header element not found in the DOM');
     }
